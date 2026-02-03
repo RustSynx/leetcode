@@ -1,1 +1,1 @@
-add_executable(solution 0001.cpp)
+add_executable(solution_0001 0001.cpp)
