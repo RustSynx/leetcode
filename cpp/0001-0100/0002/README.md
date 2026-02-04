@@ -1,4 +1,4 @@
-# 1. Add Two Numbers
+# 2. Add Two Numbers
 
 [Problem Link](https://leetcode.com/problems/add-two-numbers/description/)
 
