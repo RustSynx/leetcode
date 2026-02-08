@@ -6,3 +6,4 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXECUTABLE_SUFFIX ".out")
 
 add_subdirectory(0001-0100)
+add_subdirectory(weekly_contest)
