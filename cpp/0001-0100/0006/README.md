@@ -4,7 +4,7 @@
 
 ### 💡 Approach & Retrospective
 
-- **Initial Approach (Intuitive but Inefficient):**:
+- **Initial Approach (Intuitive but Inefficient)**:
   - I initially attempted a solution using a highly intuitive approach.
   - While the efficiency was sub-optimal, it successfully passed all test cases.
   - The implementation felt straightforward, though I prioritized functionality over performance during this phase.
