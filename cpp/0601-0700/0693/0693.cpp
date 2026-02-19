@@ -41,8 +41,8 @@ int main() {
   cout << "PASSED" << endl;
 
 
-  // Test Case 2
-  cout << "Test Case 2: " << endl;
+  // Test Case 3
+  cout << "Test Case 3: " << endl;
   result = sol.hasAlternatingBits(11);
   result_expected = false;
   cout << "result : " << result << endl;

@@ -69,8 +69,8 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 2
-  cout << "Test Case 2: " << endl;
+  // Test Case 3
+  cout << "Test Case 3: " << endl;
   nums = {1,1,2};
   result = sol.firstUniqueFreq(nums);
   result_expected = 1;
