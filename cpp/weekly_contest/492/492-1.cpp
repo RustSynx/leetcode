@@ -46,8 +46,8 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 2
-  cout << "Test Case 2: " << endl;
+  // Test Case 3
+  cout << "Test Case 3: " << endl;
   input = {4};
   result = sol.minimumIndex(input, 5);
   result_expected = -1;
