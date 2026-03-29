@@ -5,4 +5,4 @@
 ### Review
 
 I have become familiar with using bit manipulation.
-So now, I am confident int it, and I am going to try solving advanced problems.
+So now, I am confident into it, and I am going to try solving advanced problems.
