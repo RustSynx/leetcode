@@ -10,38 +10,31 @@
 using namespace std;
 
 class Solution {
-public:
+ public:
   vector<int> getBiggestThree(vector<vector<int>>& grid) {
     set<int, greater<int>> sum_set;
-    vector<vector<int>> left_acc_sum(grid.size(), vector<int>(grid[0].size(), 0));
-    vector<vector<int>> right_acc_sum(grid.size(), vector<int>(grid[0].size(), 0));
-    for (int i = 0; i < grid.size(); i++) {
-      for (int j = 0; j < grid[0].size(); j++) {
+    int m = static_cast<int>(grid.size());
+    int n = static_cast<int>(grid[0].size());
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
         sum_set.insert(grid[i][j]);
-        left_acc_sum[i][j] = (i-1 >=0 && j-1 >= 0) ? left_acc_sum[i-1][j-1] + grid[i][j] : grid[i][j];
-        right_acc_sum[i][j] = (i-1 >= 0 && j+1 < grid[0].size()) ? right_acc_sum[i-1][j+1] + grid[i][j] : grid[i][j];
-      }
-    }
-    for (int i = 0; i < grid.size(); i++) {
-      for (int j = 0; j < grid[0].size(); j++) {
-        int radius = 1;
-        while (radius < grid.size()) {
-          int top = i - radius;
-          int bottom = i + radius;
-          int left = j - radius;
-          int right = j + radius;
-          if (top < 0) break;
-          if (bottom > grid.size() - 1) break;
-          if (left < 0) break;
-          if (right > grid[0].size() - 1) break;
+        for (int radius = 1; radius < 25; radius++) {
+          if (i - radius < 0 || j - radius < 0 || i + radius >= m ||
+              j + radius >= n)
+            break;
           int sum = 0;
-          sum += left_acc_sum[i][right] - (top-1 >= 0 && j-1 >= 0 ? left_acc_sum[top-1][j-1] : 0);
-          sum += left_acc_sum[bottom][j] - (i-1 >= 0 && left-1 >= 0 ? left_acc_sum[i-1][left-1] : 0);
-          sum += right_acc_sum[i][left] - (top-1 >= 0 && j+1 < grid[0].size() ? right_acc_sum[top-1][j+1] : 0);
-          sum += right_acc_sum[bottom][j] - (i-1 >= 0 && right+1 < grid[0].size() ? right_acc_sum[i-1][right+1] : 0);
-          sum -= grid[top][j] + grid[bottom][j] + grid[i][left] + grid[i][right];
+          int x_step[] = {1, 1, -1, -1};
+          int y_step[] = {-1, 1, 1, -1};
+          int x = j - radius;
+          int y = i;
+          for (int k = 0; k < 4; k++) {
+            for (int l = 0; l < radius; l++) {
+              sum += grid[y][x];
+              x += x_step[k];
+              y += y_step[k];
+            }
+          }
           sum_set.insert(sum);
-          radius++;
         }
       }
     }
@@ -59,9 +52,13 @@ int main() {
 
   // Test Case 1
   cout << "Test Case 1: " << endl;
-  vector<vector<int>> input = {{3,4,5,1,3},{3,3,4,2,3},{20,30,200,40,10},{1,5,5,4,1},{4,3,2,2,5}};
+  vector<vector<int>> input = {{3, 4, 5, 1, 3},
+                               {3, 3, 4, 2, 3},
+                               {20, 30, 200, 40, 10},
+                               {1, 5, 5, 4, 1},
+                               {4, 3, 2, 2, 5}};
   vector<int> result = sol.getBiggestThree(input);
-  vector<int> result_expected = {228,216,211};
+  vector<int> result_expected = {228, 216, 211};
   cout << "result : ";
   for (int num : result) {
     cout << num << " ";
@@ -77,7 +74,7 @@ int main() {
 
   // Test Case 2
   cout << "Test Case 2: " << endl;
-  input = {{1,2,3},{4,5,6},{7,8,9}};
+  input = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
   result = sol.getBiggestThree(input);
   result_expected = {20, 9, 8};
   cout << "result : ";
@@ -95,7 +92,7 @@ int main() {
 
   // Test Case 3
   cout << "Test Case 3: " << endl;
-  input = {{7,7,7}};
+  input = {{7, 7, 7}};
   result = sol.getBiggestThree(input);
   result_expected = {7};
   cout << "result : ";
