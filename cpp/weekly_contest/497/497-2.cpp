@@ -36,7 +36,7 @@ int main() {
   vector<int> sides = {3, 4, 5};
   vector<double> result = sol.internalAngles(sides);
   vector<double> result_expected = {36.86990, 53.13010, 90.00000};
-  // assert(result == result_expected);
+  assert(result == result_expected);
   cout << "PASSED" << endl;
 
   // Test Case 2
