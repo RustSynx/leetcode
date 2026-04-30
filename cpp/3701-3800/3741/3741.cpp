@@ -36,7 +36,7 @@ int main() {
 
   // Test Case 1
   cout << "Test Case 1: " << endl;
-  vector nums = {1, 2, 1, 1, 3};
+  vector<int> nums = {1, 2, 1, 1, 3};
   int result = sol.minimumDistance(nums);
   int result_expected = 6;
   cout << "result : " << result << endl;
