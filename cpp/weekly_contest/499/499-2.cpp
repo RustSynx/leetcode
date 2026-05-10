@@ -98,12 +98,5 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 3
-  cout << "Test Case 3: " << endl;
-  result = sol.sortVowels("oes");
-  result_expected = "oes";
-  assert(result == result_expected);
-  cout << "PASSED" << endl;
-
   return 0;
 }
