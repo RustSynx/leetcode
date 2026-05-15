@@ -47,7 +47,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*; // 위에 있는 Solution 구조체를 가져옴
+    use super::*;
 
     #[test]
     fn test_example_1() {
