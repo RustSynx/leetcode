@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -46,7 +47,7 @@ int main() {
     cout << s << " ";
   }
   cout << endl;
-  cout << "result : ";
+  cout << "result_expected : ";
   for (string s : result_expected) {
     cout << s << " ";
   }
@@ -63,7 +64,7 @@ int main() {
     cout << s << " ";
   }
   cout << endl;
-  cout << "result : ";
+  cout << "result_expected : ";
   for (string s : result_expected) {
     cout << s << " ";
   }
