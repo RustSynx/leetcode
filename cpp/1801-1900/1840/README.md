@@ -4,3 +4,4 @@
 
 ### Review
 
+This problem's algorithm is quite straightforward, but implementing it is challenging.
