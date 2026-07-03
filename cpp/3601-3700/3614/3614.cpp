@@ -78,8 +78,8 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 2
-  cout << "Test Case 2: " << endl;
+  // Test Case 3
+  cout << "Test Case 3: " << endl;
   result = sol.processStr("z*#", 0);
   result_expected = '.';
   cout << "result : " << result << endl;
