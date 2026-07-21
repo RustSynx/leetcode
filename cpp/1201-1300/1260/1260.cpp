@@ -46,8 +46,8 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 2
-  cout << "Test Case 2: " << endl;
+  // Test Case 3
+  cout << "Test Case 3: " << endl;
   grid = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
   result = sol.shiftGrid(grid, 9);
   result_expected = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
