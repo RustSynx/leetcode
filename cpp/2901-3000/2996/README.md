@@ -4,4 +4,4 @@
 
 ### Review
 
-This is a quite straightforward problem.
+This is quite a straightforward problem.
