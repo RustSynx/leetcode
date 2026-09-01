@@ -1,0 +1,1 @@
+add_executable(solution_3568 3568.cpp)
