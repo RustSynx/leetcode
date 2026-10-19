@@ -1,4 +1,4 @@
-# 2078. Two Furthest Houses With Different Colors
+# 2089. Find Target Indices After Sorting Array
 
 [Problem Link](https://leetcode.com/problems/find-target-indices-after-sorting-array/description/)
 
