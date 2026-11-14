@@ -114,8 +114,8 @@ int main() {
   assert(result == result_expected);
   cout << "PASSED" << endl;
 
-  // Test Case 3
-  cout << "Test Case 3: " << endl;
+  // Test Case 4
+  cout << "Test Case 4: " << endl;
   result = sol.smallestNumber("78", 42);
   result_expected = "167";
   cout << "result : " << result << endl;
