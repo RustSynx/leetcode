@@ -1,0 +1,1 @@
+add_executable(solution_2124 2124.cpp)
